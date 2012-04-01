@@ -12,6 +12,11 @@ jQuery.carousel requires:
 2. Modernizr (any version?)
 3. Seperate CSS; setting styles for each item, giving each an absolute position. Styles and javascript is *mostly* seperated. 
 
+	
+## How to use
+More info coming soon. Meanwhile, check out `demo.html` and `demo.css`.
+
+By default the carousel auto starts and the interval is killed as soon as the user interacts with any part of the carousel navigation.
 
 ##Settings (default values)
 	
@@ -41,10 +46,14 @@ jQuery.carousel requires:
 	</tr>
 </table>
 
-	
-## How to use
-More info coming soon. Meanwhile, check out `demo.html` and `demo.css`.
 
 ## Browser support
-More info coming soon
+More info coming soon.
+
+So far tested and works with:
+
+* Chrome 18/Mac
+* Safari 5/Mac
+* Opera 11.6/Mac
+* Firefox 11/Mac
 
