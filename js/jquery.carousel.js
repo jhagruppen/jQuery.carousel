@@ -8,11 +8,11 @@
 		var defaults = {  
 			nav: 'full',
 			control: '#billboard-nav',
-			transtime: 1000,
+			transdur: 1000,
 			fadeOut: 'fade-out',
 			fadeIn: 'fade-in',
 			active: 'active',
-			delay: 500
+			time: 500
 		};  
 		var options = $.extend(defaults, options); 
 		var cCount = 0;
@@ -28,10 +28,10 @@
 			refCont.find('.item').each(function(i) { 
 			var obj = $(this)
 				.addClass('item-'+(i+1))
-				.attr({style:'transition-duration:'+options.transtime+'ms'
-					+'; -moz-transition-duration:'+options.transtime+'ms'
-					+'; -webkit-transition-duration:'+options.transtime+'ms'
-					+'; -o-transition-duration:'+options.transtime+'ms'});
+				.attr({style:'transition-duration:'+options.transdur+'ms'
+					+'; -moz-transition-duration:'+options.transdur+'ms'
+					+'; -webkit-transition-duration:'+options.transdur+'ms'
+					+'; -o-transition-duration:'+options.transdur+'ms'});
 				refItems[i] = obj;
 			});
 			$(options.control).find('a').on('click', function() {
@@ -47,7 +47,7 @@
 			});
 			refCont.find(':first-child').addClass('fade-in');
 			setActive();
-			cInt = setInterval(init, options.transtime + options.delay);
+			cInt = setInterval(init, options.transdur + options.time);
 		});
 		function init() {
 			cRunning = true;
@@ -72,9 +72,9 @@
 						.siblings().removeClass(options.fadeIn).addClass(options.fadeOut);
 					cRunning = false;	
 				} else {
-					el.fadeTo(options.transtime, 1, function() {
+					el.fadeTo(options.transdur, 1, function() {
 						cRunning = false;
-				}).siblings().fadeTo(options.transtime, 0);
+				}).siblings().fadeTo(options.transdur, 0);
 			}
 			setActive(val);
 		}
