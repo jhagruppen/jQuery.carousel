@@ -6,7 +6,7 @@
 (function($) {
 	$.fn.carouselFade = function(options) {
 		var defaults = {  
-			nav: 'all',
+			nav: 'full',
 			control: '#billboard-nav',
 			transtime: 1000,
 			fadeOut: 'fade-out',
@@ -106,7 +106,7 @@
 						refControl.append('<li><a href="#item" rel="prev">Prev</a></li>');
 						refControl.append('<li><a href="#item" rel="next">Next</a></li>');
 						break;
-					case 'all':
+					case 'full':
 						refCont.children().each(function(i) {
 							if(i===0) {
 								refCont.after('<ul id="'+options.control.replace('#', '')+'"></ul>');
