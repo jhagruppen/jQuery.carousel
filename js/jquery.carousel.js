@@ -12,7 +12,9 @@
 			fadeOut: 'fade-out',
 			fadeIn: 'fade-in',
 			active: 'active',
-			time: 500
+			time: 500,
+			prev:'Prev',
+			next:'Next'
 		};  
 		var options = $.extend(defaults, options); 
 		var cCount = 0;
@@ -103,20 +105,20 @@
 					case 'carousel':
 						refCont.after('<ul id="'+options.control.replace('#', '')+'"></ul>');
 						refControl = $(options.control);	
-						refControl.append('<li><a href="#item" rel="prev">Prev</a></li>');
-						refControl.append('<li><a href="#item" rel="next">Next</a></li>');
+						refControl.append('<li><a href="#item" rel="prev">'+options.prev+'</a></li>');
+						refControl.append('<li><a href="#item" rel="next">'+options.next+'</a></li>');
 						break;
 					case 'full':
 						refCont.children().each(function(i) {
 							if(i===0) {
 								refCont.after('<ul id="'+options.control.replace('#', '')+'"></ul>');
 								refControl = $(options.control);	
-								refControl.append('<li><a href="" rel="prev">Prev</a></li>');
+								refControl.append('<li><a href="" rel="prev">'+options.prev+'</a></li>');
 							} 
 							a = i+1;
 							refControl.append('<li class="item-'+a+'"><a href="#item-'+a+'" rel="episode">'+a+'</a></li>');
 							if(i===refCont.children().length-1) {
-								refControl.append('<li><a href="" rel="next">Next</a></li>');
+								refControl.append('<li><a href="" rel="next">'+options.next+'</a></li>');
 							}
 						});
 						break;	
