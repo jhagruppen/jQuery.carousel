@@ -2,40 +2,49 @@
 
 ##About
 
-jQuery.carousel.js is a simple fade in/fade out carousel using CSS Transitions and javascript as fallback. This is work in progress. 
+jQuery.carousel.js is a simple fade in/fade out carousel primarly using CSS Transitions with Javascript as fallback. This is work in progress. 
 
 ##Dependencies
 
 jQuery.carousel requires:
 
-1. jQuery
-2. Modernizr
+1. jQuery 1.7 (due to use of "on()" and probably an easy fix if you need an older version of jQuery)
+2. Modernizr (any version?)
+3. Seperate CSS; setting styles for each item, giving each an absolute position. Styles and javascript is *mostly* seperated. 
 
-##Settings
 
+##Settings (default values)
 	
-	nav: 'all' // all, episode or carousel
-	control: '#billboard-nav' // id on navigation
-	transtime: 1000, // duration for transition
+	nav: 'full', //full, episode or carousel
+	control: '#billboard-nav', //id of navigation
+	transdur: 1000, //duration for transition
+	time: 500' //time for each slide visible
 	fadeOut: 'fade-out', //class name for fade out
 	fadeIn: 'fade-in', //class name for fade in
-	active: 'active', //class name for active slide in navigation
-	delay: 500' //delay for each slide
+	active: 'active' //class name for active slide in navigation
+	prev: 'Prev' //label for previous link
+	next: 'Next' //label for next link
 
+###Setting: nav
+<table>
+	<tr>
+		<th width="20%">'full'</th>
+		<td>Displays the full set of ways to navigate the carousel, i.e.  	"prev | 1 | 2 | 3 | … | next" </td>
+	</tr>
+	<tr>
+		<th>'episode'</th>
+		<td>Displays a link for each item in the carousel, each represented by a number, i.e. " 1 | 2 | 3 | … " </td>
+	</tr>
+	<tr>
+		<th>'carousel'</th>
+		<td>Just displays a previous and next button, i.e. " prev | next" </td>
+	</tr>
+</table>
 
-###{nav:}
-####'all'
-Will display: prev - 1 - 2 - 3 - … - next
-####'episode'
-Will display: 1 - 2 - 3 - … 
-####'carousel'
-Will display: prev - next
-
+	
 ## How to use
-
 More info coming soon. Meanwhile, check out `demo.html` and `demo.css`.
 
 ## Browser support
-
 More info coming soon
 
