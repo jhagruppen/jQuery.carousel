@@ -1,0 +1,26 @@
+#billboard {
+	width: 700px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+.item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-out;
+	width: 500px;
+	height: 500px;
+}
+
+
+
+
+
+.fade-out {
+	opacity: 0;
+}
+.fade-in {
+	opacity: 1;
+}
