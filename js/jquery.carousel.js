@@ -9,8 +9,8 @@
 			nav: 'full',
 			control: 'carousel-nav',
 			transdur: 1000,
-			fadeOut: 'fade-out',
-			fadeIn: 'fade-in',
+			out: 'fade-out',
+			in: 'fade-in',
 			active: 'active',
 			time: 500,
 			prev:'Prev',
@@ -49,7 +49,7 @@
 				clearInterval(cInt);
 				return false;
 			});
-			refCont.find(':first-child').addClass(options.fadeIn);
+			refCont.find(':first-child').addClass(options.in);
 			setActive();
 			if(refItems.length>1) cInt = setInterval(init, options.transdur + options.time);
 		});
@@ -72,8 +72,8 @@
 			var el = refItems[count(val.href)];
 				if (refCSSTrans) {
 					el
-						.removeClass(options.fadeOut).addClass(options.fadeIn)
-						.siblings().removeClass(options.fadeIn).addClass(options.fadeOut);
+						.removeClass(options.out).addClass(options.in)
+						.siblings().removeClass(options.in).addClass(options.out);
 					cRunning = false;	
 				} else {
 					el.fadeTo(options.transdur, 1, function() {
