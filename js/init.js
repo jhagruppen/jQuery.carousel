@@ -1,3 +1,5 @@
-$('#billboard').carouselFade({
-	prev: 'Föregående'
+$('#carousel').carouselFade({
+	nav:'episode',
+	prev: '&larr;',
+	next: '&rarr;'
 });

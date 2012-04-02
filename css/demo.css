@@ -8,12 +8,29 @@ a {
 	a:hover,a.active {
 		background: #eee;
 	}
-#billboard {
-	width: 700px;
+#carousel {
+	width: 500px;
 	height: 200px;
 	overflow: hidden;
 	position: relative;
+	margin: 0 auto;
 }
+#carousel-nav {
+	margin: 10px auto;
+	width: 500px;
+	}
+	#carousel-prev,
+	#carousel-next {
+		position: absolute;
+		top: 80px;
+		left: 50%;
+	}
+	#carousel-prev {
+		margin-left: -320px;
+	}
+	#carousel-next {
+		margin-left: 270px;
+	}
 .item {
 	position: absolute;
 	left: 0;
