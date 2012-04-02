@@ -1,6 +1,7 @@
 body {
 	font-family: sans-serif;
 	font-weight: 300;
+	padding: 30px;
 }
 a {
 	text-decoration: none;
@@ -22,7 +23,7 @@ a {
 	#carousel-prev,
 	#carousel-next {
 		position: absolute;
-		top: 80px;
+		top: 120px;
 		left: 50%;
 	}
 	#carousel-prev {
@@ -33,14 +34,14 @@ a {
 	}
 .item {
 	position: absolute;
-	left: 0;
+	left: 500px;
 	top: 0;
-	opacity: 0;
-	-webkit-transition: opacity 1s ease-out;
-	-o-transition: opacity 1s ease-out;
-	-ms-transition: opacity 1s ease-out;
-	-moz-transition: opacity 1s ease-out;
-	transition: opacity 1s ease-out;
+
+	-webkit-transition: left 1s ease-out;
+	-o-transition: left 1s ease-out;
+	-ms-transition: left 1s ease-out;
+	-moz-transition: left 1s ease-out;
+	transition: left 1s ease-out;
 	width: 500px;
 	height: 500px;
 	}
@@ -51,10 +52,10 @@ a {
 	.item:nth-child(5) { background: #0cf }
 
 .fade-out {
-	opacity: 0;
+	left: 500px;
 }
 .fade-in {
-	opacity: 1;
+	left: 0px;
 }
 ul {
 	list-style-type: none;
