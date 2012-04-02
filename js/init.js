@@ -1,1 +1,3 @@
-$('#billboard').carouselFade();
+$('#billboard').carouselFade({
+	prev: 'Föregående'
+});
