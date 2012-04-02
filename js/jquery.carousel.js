@@ -4,7 +4,7 @@
 **
 */
 (function($) {
-	$.fn.carouselFade = function(options) {
+	$.fn.carousel = function(options) {
 		var defaults = {  
 			nav: 'full',
 			control: 'carousel-nav',
