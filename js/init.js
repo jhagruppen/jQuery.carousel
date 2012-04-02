@@ -1,4 +1,6 @@
-$('#carousel').carouselFade({
+$('#carousel').carousel({
 	prev: '&larr;',
-	next: '&rarr;'
+	next: '&rarr;',
+	transdur: 500,
+	time: 1250
 });
