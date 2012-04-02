@@ -32,6 +32,7 @@
 			refContChildren.each(function(i) { 
 			var obj = $(this)
 				.addClass('item-'+(i+1))
+				.attr('id', 'item-'+(i+1))
 				.attr({style:'transition-duration:'+options.transdur+'ms'
 					+'; -moz-transition-duration:'+options.transdur+'ms'
 					+'; -webkit-transition-duration:'+options.transdur+'ms'
