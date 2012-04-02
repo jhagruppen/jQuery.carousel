@@ -26,7 +26,7 @@
 		var refWidth = refCont.width();
 		var refControl = setupNav(options.nav);
 		var refCSSTrans = Modernizr.csstransitions; // CSS Transitions availability in browser
-	    return this.each(function() {  
+		return this.each(function() {  
 			refCont.find('.item').each(function(i) { 
 			var obj = $(this)
 				.addClass('item-'+(i+1))
@@ -49,7 +49,7 @@
 			});
 			refCont.find(':first-child').addClass('fade-in');
 			setActive();
-			cInt = setInterval(init, options.transdur + options.time);
+			if(refItems.length>1) cInt = setInterval(init, options.transdur + options.time);
 		});
 		function init() {
 			cRunning = true;
@@ -100,7 +100,7 @@
 			return cCount;
 		}
 		function setupNav(val) {
-			if($(options.control).length===0) {
+			if($(options.control).length===0&&refItems.length>1) {
 				switch(val) {
 					case 'carousel':
 						refCont.after('<ul id="'+options.control.replace('#', '')+'"></ul>');
