@@ -34,14 +34,14 @@ a {
 	}
 .item {
 	position: absolute;
-	left: 500px;
+	left: 0;
 	top: 0;
-
-	-webkit-transition: left 1s ease-out;
-	-o-transition: left 1s ease-out;
-	-ms-transition: left 1s ease-out;
-	-moz-transition: left 1s ease-out;
-	transition: left 1s ease-out;
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-out;
+	-o-transition: opacity 1s ease-out;
+	-ms-transition: opacity 1s ease-out;
+	-moz-transition: opacity 1s ease-out;
+	transition: opacity 1s ease-out;
 	width: 500px;
 	height: 500px;
 	}
@@ -52,10 +52,10 @@ a {
 	.item:nth-child(5) { background: #0cf }
 
 .fade-out {
-	left: 500px;
+	opacity: 0;
 }
 .fade-in {
-	left: 0px;
+	opacity: 1;
 }
 ul {
 	list-style-type: none;
