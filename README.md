@@ -2,21 +2,45 @@
 
 ##About
 
-jQuery.carousel.js is a simple fade in/fade out carousel primarly using CSS Transitions with Javascript as fallback. This is work in progress. 
+jQuery.carousel.js is a simple carousel/gallery plugin that focus on seperating Javascript and CSS. It primarily uses CSS Transitions to handle the animations, so the value that changes can possibly be anything and fallbacks to fade-in/out if CSS Transitions is not supported by the browser. 
+
+By default, the carousel auto starts and loops through all the items and starts over from the beginning. The interval is killed as soon as the user interacts with any part of the carousel navigation.
+
 
 ##Dependencies
 
-jQuery.carousel requires:
+jQuery.carousel.js requires:
 
 1. jQuery 1.7 (due to use of "on()" and probably an easy fix if you need an older version of jQuery)
 2. Modernizr (any version?)
 3. Seperate CSS; setting styles for each item, giving each an absolute position. Styles and javascript is *mostly* seperated. 
 
-	
 ## How to use
-More info coming soon. Meanwhile, check out `demo.html` and `demo.css`.
 
-By default the carousel auto starts and the interval is killed as soon as the user interacts with any part of the carousel navigation.
+Check out `demo.html` and `demo.css` for an example how to use it.
+
+Basically, make sure jQuery and Modernizr is included before the plugin.
+
+Use any HTML you prefer, as long as it's structured this way and you use the `item`-class.
+
+#####HTML
+
+	<element id="your_id">
+		<element class="item">…</element>
+		<element class="item">…</element>
+		<element class="item">…</element>
+	</element>
+	
+#####Javascript
+
+	$('#your_id').carousel({
+		prev: '&larr;',
+		next: '&rarr;',
+		transdur: 250,
+		time: 1250
+	});
+
+
 
 ##Settings (with default values)
 	
@@ -24,8 +48,8 @@ By default the carousel auto starts and the interval is killed as soon as the us
 	control: 'carousel-nav', //id of navigation
 	transdur: 1000, //duration for transition
 	time: 500' //time for each slide visible
-	fadeOut: 'fade-out', //class name for fade out
-	fadeIn: 'fade-in', //class name for fade in
+	out: 'fade-out', //class name for fade out
+	in: 'fade-in', //class name for fade in
 	active: 'active', //class name for active slide in navigation
 	prev: 'Prev', //label for previous link
 	prevId: 'carousel-prev', //id for prev wrapping element
