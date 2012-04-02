@@ -18,17 +18,20 @@ More info coming soon. Meanwhile, check out `demo.html` and `demo.css`.
 
 By default the carousel auto starts and the interval is killed as soon as the user interacts with any part of the carousel navigation.
 
-##Settings (default values)
+##Settings (with default values)
 	
 	nav: 'full', //full, episode or carousel
-	control: '#billboard-nav', //id of navigation
+	control: 'carousel-nav', //id of navigation
 	transdur: 1000, //duration for transition
 	time: 500' //time for each slide visible
 	fadeOut: 'fade-out', //class name for fade out
 	fadeIn: 'fade-in', //class name for fade in
-	active: 'active' //class name for active slide in navigation
-	prev: 'Prev' //label for previous link
-	next: 'Next' //label for next link
+	active: 'active', //class name for active slide in navigation
+	prev: 'Prev', //label for previous link
+	prevId: 'carousel-prev', //id for prev wrapping element
+	next: 'Next', //label for next link
+	nextId: 'carousel-next' //id for next wrapping element
+	
 
 ###Setting: nav
 <table>
