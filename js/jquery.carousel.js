@@ -6,6 +6,7 @@
 (function($) {
 	$.fn.carousel = function(options) {
 		var defaults = {  
+			auto: 1,
 			nav: 'full',
 			control: 'carousel-nav',
 			transdur: 1000,
@@ -52,7 +53,7 @@
 			});
 			refCont.find(':first-child').addClass(options.in);
 			setActive();
-			if(refItems.length>1) cInt = setInterval(init, options.transdur + options.time);
+			if(refItems.length>1&&options.auto===1) cInt = setInterval(init, options.transdur + options.time);
 		});
 		function init() {
 			cRunning = true;

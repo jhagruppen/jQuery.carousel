@@ -44,6 +44,7 @@ Use any HTML you prefer, as long as it's structured this way and you use the `it
 
 ##Settings (with default values)
 	
+	auto: 1, //0 to remove auto start
 	nav: 'full', //full, episode or carousel
 	control: 'carousel-nav', //id of navigation
 	transdur: 1000, //duration for transition
