@@ -22,10 +22,10 @@
 		var options = $.extend(defaults, options); 
 		var cCount = 0;
 		var cRunning = false; // if animation is running or not
-		var cFormula = 'add'; // default is add
-		var cInt; // carousel interval; autostart
+		var cFormula = 'add'; // set if it's supposed to add, subtract or go to specific slide
+		var cInt; // if auto start this is the carousel interval
 		var refCont = $(this); // container holding all slides
-		var refItems = new Array(); // reference to each slide
+		var refItems = new Array(); // reference to each slide in refCont
 		var refContChildren = refCont.find('.item'); 
 		var refControl = setupNav(options.nav);
 		var refCSSTrans = Modernizr.csstransitions; // CSS Transitions availability in browser
@@ -117,7 +117,7 @@
 							if(i===0) {
 								refCont.after('<ul id="'+options.control+'"></ul>');
 								refControl = $('#'+options.control);	
-								refControl.append('<li id="'+options.prevId+'"><a href="" rel="prev">'+options.prev+'</a></li>');
+								refControl.append('<li id="'+options.prevId+'"><a href="javascript:;" rel="prev">'+options.prev+'</a></li>');
 							} 
 							a = i+1;
 							refControl.append('<li class="item-'+a+'"><a href="#item-'+a+'" rel="episode">'+a+'</a></li>');
@@ -129,7 +129,7 @@
 					default:
 						refCont.children().each(function(i) {
 							if(i===0) {
-								refCont.after('<ul id="'+options.control.replace('#', '')+'"></ul>');
+								refCont.after('<ul id="'+options.control+'"></ul>');
 								refControl = $('#'+options.control);	
 							} 
 							a = i+1;
