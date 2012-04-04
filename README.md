@@ -96,7 +96,7 @@ Since it won't render any episodes in this navigation, you need to make sure you
 
 
 ## Browser support
-More info coming soon.
+More info coming.
 
 So far tested and works with:
 
@@ -104,4 +104,12 @@ So far tested and works with:
 * Safari 5/Mac
 * Opera 11.6/Mac
 * Firefox 11/Mac
+* Internet Explorer 9
+
+Tested and doesn't work with:
+
+* Internet Explorer 7
+* Internet Explorer 8
+
+
 
