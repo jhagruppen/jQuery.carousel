@@ -51,7 +51,7 @@
 				clearInterval(cInt);
 				return false;
 			});
-			refCont.find(':first-child').addClass(options.in);
+			refCont.find('>:first-child').addClass(options.in);
 			setActive();
 			if(refItems.length>1&&options.auto===1) cInt = setInterval(init, options.transdur + options.time);
 		});
